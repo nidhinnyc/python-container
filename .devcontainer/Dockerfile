@@ -17,3 +17,8 @@ RUN if [ "$USER_GID" != "1000" ] || [ "$USER_UID" != "1000" ]; then \
     && chown -R $USER_UID:$USER_GID /home/$USERNAME; \
     fi
 RUN mkdir -p /home/$USERNAME/code
+RUN pip install ipython
+RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+RUN unzip awscliv2.zip
+RUN ./aws/install
+RUN apt-get update && apt-get install -y groff
