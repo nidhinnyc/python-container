@@ -1,0 +1,17 @@
+{
+  "name": "python3",
+  "dockerFile": "Dockerfile",
+  "appPort": [3000],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "workspaceMount": "source=${localWorkspaceFolder},target=/home/dev/code,type=bind,consistency=delegated",
+  "workspaceFolder": "/home/dev/code",
+  "extensions": [
+    "bmewburn.vscode-intelephense-client",
+    "mhutchie.git-graph",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "ms-python.python"
+  ]
+}
